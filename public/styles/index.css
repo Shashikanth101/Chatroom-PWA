@@ -1,0 +1,76 @@
+#firstTimePage {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+}
+
+.namePromptContainer {
+  background-color: #fff;
+  border: 1px solid #555;
+  border-radius: 3px;
+}
+
+.nameHeading {
+  text-align: center;
+  font-size: 1.2rem;
+}
+
+.nameForm {
+  width: 250px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.nameInput {
+  padding: 3px;
+  font-size: 0.95rem;
+}
+
+.warningMessage {
+  font-size: 0.8rem;
+  color: rgba(240, 40, 0);
+  text-align: center;
+  margin-top: 5px;
+}
+
+.buttonsContainer {
+  display: flex;
+  justify-content: center;
+}
+
+.btn {
+  margin: auto 5px;
+  padding: 3px 6px;
+  border: 0;
+  border-radius: 3px;
+}
+
+.btn:hover {
+  cursor: pointer;
+}
+
+.saveBtn {
+  color: #fff;
+  background-color: #0070f3;
+}
+
+.saveBtn:hover {
+  background-color: #1983ff;
+}
+
+.resetBtn {
+  background-color: #fff;
+  border: 1px solid #888;
+}
+
+.resetBtn:hover {
+  background-color: #eee;
+}

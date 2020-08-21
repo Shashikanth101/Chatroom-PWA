@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chat app</title>
+  <link rel="stylesheet" href="styles/chat.css">
+  <link rel="stylesheet" href="styles/index.css">
+</head>
+<body>
+  <div class="container">
+    <h2 class="heading">Simple Group Chat</h2>
+    <div class="chatbox">
+      <div class="messageList">
+      </div>
+    </div>
+    <div class="input">
+      <form class="form">
+        <input class="textInput" type="text" name="textbox" placeholder="Enter your message" required>
+        <button class="sendBtn" type="submit">Send</button>
+      </form>
+    </div>
+  </div>
+
+  <div id="firstTimePage" style="display: none;">
+    <div class="namePromptContainer">
+      <form class="nameForm">
+        <p class="nameHeading">Pick a name</p>
+        <input class="nameInput" type="text" placeholder="Choose a name" required>
+        <p class="warningMessage">There is no option to change this later!</p>
+        <div class="buttonsContainer">
+          <button class="btn saveBtn" type="submit">Save</button>
+          <button class="btn resetBtn" type="reset">Reset</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <script src="http://localhost:3000/socket.io/socket.io.js"></script>
+  <script src="src/index.js"></script>
+  <script src="src/chat.js"></script>
+</body>
+</html>

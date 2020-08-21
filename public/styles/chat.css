@@ -1,0 +1,140 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+h2 {
+  text-align: center;
+  margin: 10px auto;
+}
+
+li {
+  text-decoration: none;
+}
+
+.container {
+  width: 100%;
+  height: 95vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/************** CHAT **************/
+
+.chatbox {
+  width: 300px;
+  height: 70vh;
+  border: 1px solid #666;
+  border-radius: 3px;
+  overflow-y: scroll;
+  margin: 20px auto;
+  padding: 15px;
+}
+
+.messageList {
+  display: flex;
+  flex-direction: column;
+}
+
+.input {
+  width: 310px;
+  border: 1px solid #666;
+  border-radius: 3px;
+  margin: 10px auto 0;
+  padding: 10px;
+}
+
+.text {
+  border: 0;
+  border-radius: 5px;
+  margin: 5px;
+  padding: 5px 7px;
+  width: auto;
+  max-width: 70%;
+}
+
+.sent-text {
+  background-color: #eee;
+  color: #333;
+  border: 1px solid #bbb;
+  margin-left: auto;
+  display: flex;
+  justify-content: right;
+}
+
+.received-text {
+  background-color: #1983ff;
+  color: #fff;
+  margin-right: auto;
+  display: flex;
+  justify-content: left;
+}
+
+.author {
+  font-size: 0.75rem;
+  color: #777;
+  margin: 0 5px -5px;
+}
+
+::-webkit-scrollbar {
+  width: 0px;  /* Remove scrollbar space */
+  background: transparent;  /* Optional: just make scrollbar invisible */
+}
+/* Optional: show position indicator in red */
+::-webkit-scrollbar-thumb {
+  background: #0070f3;
+}
+
+/************** FORM **************/
+
+.form {
+  display: flex;
+  justify-content: space-between;
+}
+
+.textInput {
+  padding: 5px;
+  font-size: 1.05rem;
+  width: 1;
+}
+
+.textInput:focus {
+  outline: none;
+}
+
+.sendBtn {
+  background-color: #0070f3;
+  color: #fff;
+  border: 0;
+  border-radius: 3px;
+  width: 57px;
+}
+
+.sendBtn:hover {
+  background-color: #1983ff;
+  cursor: pointer;
+}
+
+/************** PHONE **************/
+
+@media (max-width: 699px) {
+  .container {
+    justify-content: left;
+  }
+
+  .chatbox {
+    width: 80%;
+    height: 60vh;
+    margin: 10px auto;
+  }
+
+  .input {
+    width: 82%;
+  }
+
+  .textInput {
+    width: 80%;
+  }
+}
