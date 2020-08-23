@@ -4,20 +4,24 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Chat app</title>
-  <link rel="stylesheet" href="styles/chat.css">
-  <link rel="stylesheet" href="styles/index.css">
+  <link rel="stylesheet" type="text/css" href="./styles/index.css">
+  <link rel="stylesheet" type="text/css" href="./styles/mobile.css">
+  <link rel="manifest" href="./manifest.json">
 </head>
 <body>
   <div class="container">
-    <h2 class="heading">Simple Group Chat</h2>
+    <div class="header">
+      <h2 class="heading">Simple Group Chat</h2>
+      <span class="typing-indicator">X is typing...</span>
+    </div>
     <div class="chatbox">
       <div class="messageList">
       </div>
     </div>
     <div class="input">
       <form class="form">
-        <input class="textInput" type="text" name="textbox" placeholder="Enter your message" required>
-        <button class="sendBtn" type="submit">Send</button>
+        <input class="text-input" type="text" name="textbox" placeholder="Enter your message" autocomplete="off" required>
+        <button class="send-btn" type="submit">Send</button>
       </form>
     </div>
   </div>
@@ -26,7 +30,7 @@
     <div class="namePromptContainer">
       <form class="nameForm">
         <p class="nameHeading">Pick a name</p>
-        <input class="nameInput" type="text" placeholder="Choose a name" required>
+        <input class="nameInput" type="text" placeholder="Choose a name" autocomplete="off" required>
         <p class="warningMessage">There is no option to change this later!</p>
         <div class="buttonsContainer">
           <button class="btn saveBtn" type="submit">Save</button>
@@ -36,8 +40,9 @@
     </div>
   </div>
 
-  <script src="http://localhost:3000/socket.io/socket.io.js"></script>
-  <script src="src/index.js"></script>
-  <script src="src/chat.js"></script>
+  <script defer type="text/javascript" src="./socket.io/socket.io.js"></script>
+  <script defer type="text/javascript" src="./src/index.js"></script>
+  <script defer type="text/javascript" src="./src/userName.js"></script>
+  <script defer type="text/javascript" src="./src/chat.js"></script>
 </body>
 </html>

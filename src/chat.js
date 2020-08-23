@@ -1,9 +1,8 @@
 const socket = io.connect('/')
 
 const form = document.getElementsByClassName('form')[0]
-const textInput = document.getElementsByClassName('textInput')[0]
+const textInput = document.getElementsByClassName('text-input')[0]
 const messageList = document.getElementsByClassName('messageList')[0]
-const name = localStorage.getItem('NAME') || 'Anonymous'
 
 let lastSender = ''
 let currentSender = ''
@@ -16,6 +15,10 @@ function updateScroll() {
 form.addEventListener('submit', (event) => {
   // Prevent Tab reloading due to form submit
   event.preventDefault()
+
+  // GET the stored name
+  let name = localStorage.getItem('NAME')
+  if (name === null) name = 'Anonymous'
 
   // Entered message
   const message = textInput.value
@@ -43,7 +46,7 @@ function appendMessage(message, style, from) {
   newMessage.setAttribute('class', `${style} text`)
 
   // Update UI
-  messageList.appendChild(sender)
+  sender.innerText !== '' && messageList.appendChild(sender)
   messageList.appendChild(newMessage)
   updateScroll()
   lastSender = from
