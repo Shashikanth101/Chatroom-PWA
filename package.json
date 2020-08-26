@@ -1,15 +1,19 @@
 {
   "name": "chat",
   "version": "1.0.0",
-  "description": "Simple WebSocket based chat app",
+  "description": "Simple WebSocket based chat room",
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
-    "server": "nodemon server.js"
+    "dev": "nodemon server.js"
   },
   "author": "Shashikanth P",
   "license": "ISC",
   "dependencies": {
+    "express": "^4.17.1",
     "socket.io": "^2.3.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.4"
   }
 }
