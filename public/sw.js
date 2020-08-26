@@ -5,8 +5,7 @@ const staticAssets = [
   './src/userName.js',
   './src/chat.js',
   './styles/index.css',
-  './styles/mobile.css',
-  './socket.io/socket.io.js'
+  './styles/mobile.css'
 ]
 
 // Installing service worker
